@@ -1,0 +1,683 @@
+---
+title: Answer
+layout: ./app/layout2.ejs
+engine: ejs
+current: index
+---
+
+<main class="container-fluid">
+  <section class="d-flex align-items-center justify-content-between p-32">
+    <section class="d-flex align-items-center">
+      <h2 class="fw-bold fz-4 pe-37">Admin</h2>
+      <button
+        class="btn d-flex admin-hover"
+        data-bs-toggle="modal"
+        data-bs-target="#Moda1"
+      >
+        <span class="material-symbols-outlined fc-main pe-2"> add </span>
+        <p class="gray-900 fw-900 mb-0">Add New Admin</p>
+      </button>
+      <!-- add admin -->
+      <div
+        class="modal fade"
+        id="Moda1"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <h5
+                class="modal-title gray-900 fw-bold fs-4"
+                id="exampleModalLabel"
+              >
+                New Admin
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p class="mb-3 fs-5 gray-900 fw-bold lh-33">Account</p>
+              <form action="">
+                <div class="d-flex flex-column">
+                  <label class="fs-14 gray-900 mb-1" for="name">Name</label>
+                  <input
+                    form="name"
+                    class="form-control border-black rounded-1 p-3 lh-19 bc-gray-100 mb-3 bg-white"
+                    type="text"
+                    aria-label=""
+                  />
+                  <label class="fs-14 gray-900 mb-1" for="email">Email</label>
+                  <input
+                    form="email"
+                    class="form-control border-black rounded-1 p-3 lh-19 bc-gray-100 mb-23 bg-white"
+                    type="email"
+                    aria-label=""
+                  />
+                </div>
+                <div class="admin-line mb-23"></div>
+                <p class="mb-3 fs-5 gray-900 fw-bold lh-33">Verification</p>
+                <label
+                  class="d-flex justify-content-between align-items-center mb-3"
+                  for="Verified"
+                >
+                  <div class="d-flex align-items-center">
+                    <span class="material-symbols-outlined text-success fs-5">
+                      check_circle
+                    </span>
+                    <p class="lh-19 fw-bold gray-900 mb-0">Verified</p>
+                  </div>
+                  <time class="lh-17 fs-14 gray-900 mb-0">2020/4/12</time>
+                </label>
+                <input
+                  class="verification-btn w-100 py-3 bg-white mb-23"
+                  form="Verified"
+                  type="button"
+                  value="Send Verification Mail"
+                  disabled
+                />
+                <div class="admin-line mb-23"></div>
+                <p class="mb-3 fs-5 gray-900 fw-bold lh-33">Access Level</p>
+                <div class="dropdown mb-23">
+                  <button
+                    class="dropdown-toggle border-black w-100 arrow d-flex justify-content-between align-items-center p-3 bg-white"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Admin
+                    <span class="material-symbols-outlined"> expand_more </span>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="admin-line mb-23"></div>
+                <p class="mb-3 fs-5 gray-900 fw-bold lh-33">Custom Access</p>
+
+                <section class="ps-3 mb-23">
+                  <div class="form-check mb-3 d-flex align-items-center gap-2">
+                    <input
+                      class="form-check-input fs-4"
+                      type="checkbox"
+                      value="Lecture"
+                      id="Lecture"
+                    />
+                    <label
+                      class="form-check-label lh-19 gray-900"
+                      for="Lecture"
+                    >
+                      Lecture
+                    </label>
+                  </div>
+                  <div class="form-check mb-3 d-flex align-items-center gap-2">
+                    <input
+                      class="form-check-input fs-4"
+                      type="checkbox"
+                      value="Coupon"
+                      id="Coupon"
+                    />
+                    <label class="form-check-label lh-19 gray-900" for="Coupon">
+                      Coupon
+                    </label>
+                  </div>
+                  <div class="form-check mb-3 d-flex align-items-center gap-2">
+                    <input
+                      class="form-check-input fs-4"
+                      type="checkbox"
+                      value="Message"
+                      id="Message"
+                    />
+                    <label
+                      class="form-check-label lh-19 gray-900"
+                      for="Message"
+                    >
+                      Message
+                    </label>
+                  </div>
+                  <div class="form-check mb-3 d-flex align-items-center gap-2">
+                    <input
+                      class="form-check-input fs-4"
+                      type="checkbox"
+                      value="Setting"
+                      id="Setting"
+                    />
+                    <label
+                      class="form-check-label lh-19 gray-900"
+                      for="Setting"
+                    >
+                      Setting
+                    </label>
+                  </div>
+                  <div class="form-check d-flex align-items-center gap-2">
+                    <input
+                      class="form-check-input fs-4"
+                      type="checkbox"
+                      value="Task Menu"
+                      id="Task Menu"
+                    />
+                    <label
+                      class="form-check-label lh-19 gray-900"
+                      for="Task Menu"
+                    >
+                      Task Menu
+                    </label>
+                  </div>
+                </section>
+                <div class="text-end mb-3">
+                  <input
+                    class="btn btn-outline-success py-2 px-32 fw-bold lh-19"
+                    type="button"
+                    value="Cancel"
+                  />
+                  <input
+                    class="btn btn-success py-2 px-32 ms-3 fw-bold lh-19"
+                    type="button"
+                    value="Add"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="material-symbols-outlined me-4"> search </span>
+      <span class="material-symbols-outlined"> notifications_active </span>
+    </section>
+  </section>
+
+  <section class="mx-5">
+    <table class="table table-hover">
+      <thead>
+        <tr class="gray-900 fw-bold">
+          <th scope="col">
+            ID
+            <span class="material-icons fc-main align-text-bottom">
+              arrow_downward
+            </span>
+          </th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Verified</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr>
+          <th scope="row">#1</th>
+          <td>Emir Wicks</td>
+          <td>emir.wicks@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span
+              class="material-symbols-outlined"
+              data-bs-toggle="modal"
+              data-bs-target="#Moda3"
+            >
+              visibility
+            </span>
+            <!-- edit btn -->
+            <span
+              class="material-symbols-outlined ms-4"
+              data-bs-toggle="modal"
+              data-bs-target="#Moda2"
+            >
+              edit
+            </span>
+          </td>
+          <!-- edit from -->
+          <div
+            class="modal fade"
+            id="Moda2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <h5
+                    class="modal-title gray-900 fw-bold fs-4"
+                    id="exampleModalLabel"
+                  >
+                    Edit Admin
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p class="mb-3 fs-5 gray-900 fw-bold lh-33">Account</p>
+                  <form action="">
+                    <div class="d-flex flex-column">
+                      <label class="fs-14 gray-900 mb-1" for="name">Name</label>
+                      <input
+                        form="name"
+                        class="form-control border-0 rounded-1 p-3 lh-19 bc-gray-100 mb-3"
+                        type="text"
+                        value="Emir Wicks"
+                        aria-label="Disabled input example"
+                        disabled
+                        readonly
+                      />
+                      <label class="fs-14 gray-900 mb-1" for="email"
+                        >Email</label
+                      >
+                      <input
+                        form="email"
+                        class="form-control border-0 rounded-1 p-3 lh-19 bc-gray-100 mb-23"
+                        type="email"
+                        value="emir.wicks@mail.com"
+                        aria-label="Disabled input example"
+                        disabled
+                        readonly
+                      />
+                    </div>
+                    <div class="admin-line mb-23"></div>
+                    <p class="mb-3 fs-5 gray-900 fw-bold lh-33">Verification</p>
+                    <label
+                      class="d-flex justify-content-between align-items-center mb-3"
+                      for="Verified"
+                    >
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="material-symbols-outlined text-success fs-5"
+                        >
+                          check_circle
+                        </span>
+                        <p class="lh-19 fw-bold gray-900 mb-0">Verified</p>
+                      </div>
+                      <time class="lh-17 fs-14 gray-900 mb-0">2020/4/12</time>
+                    </label>
+                    <input
+                      class="verification-btn w-100 py-3 bg-white mb-23"
+                      form="Verified"
+                      type="button"
+                      value="Send Verification Mail"
+                      disabled
+                    />
+                    <div class="admin-line mb-23"></div>
+                    <p class="mb-3 fs-5 gray-900 fw-bold lh-33">Access Level</p>
+                    <div class="dropdown mb-23">
+                      <button
+                        class="dropdown-toggle border-black w-100 arrow d-flex justify-content-between align-items-center p-3 bg-white"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Admin
+                        <span class="material-symbols-outlined">
+                          expand_more
+                        </span>
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                      >
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="admin-line mb-23"></div>
+                    <p class="mb-3 fs-5 gray-900 fw-bold lh-33">
+                      Custom Access
+                    </p>
+
+                    <section class="ps-3 mb-23">
+                      <div
+                        class="form-check mb-3 d-flex align-items-center gap-2"
+                      >
+                        <input
+                          class="form-check-input fs-4"
+                          type="checkbox"
+                          value="Lecture"
+                          id="Lecture"
+                        />
+                        <label
+                          class="form-check-label lh-19 gray-900"
+                          for="Lecture"
+                        >
+                          Lecture
+                        </label>
+                      </div>
+                      <div
+                        class="form-check mb-3 d-flex align-items-center gap-2"
+                      >
+                        <input
+                          class="form-check-input fs-4"
+                          type="checkbox"
+                          value="Coupon"
+                          id="Coupon"
+                        />
+                        <label
+                          class="form-check-label lh-19 gray-900"
+                          for="Coupon"
+                        >
+                          Coupon
+                        </label>
+                      </div>
+                      <div
+                        class="form-check mb-3 d-flex align-items-center gap-2"
+                      >
+                        <input
+                          class="form-check-input fs-4"
+                          type="checkbox"
+                          value="Message"
+                          id="Message"
+                        />
+                        <label
+                          class="form-check-label lh-19 gray-900"
+                          for="Message"
+                        >
+                          Message
+                        </label>
+                      </div>
+                      <div
+                        class="form-check mb-3 d-flex align-items-center gap-2"
+                      >
+                        <input
+                          class="form-check-input fs-4"
+                          type="checkbox"
+                          value="Setting"
+                          id="Setting"
+                        />
+                        <label
+                          class="form-check-label lh-19 gray-900"
+                          for="Setting"
+                        >
+                          Setting
+                        </label>
+                      </div>
+                      <div class="form-check d-flex align-items-center gap-2">
+                        <input
+                          class="form-check-input fs-4"
+                          type="checkbox"
+                          value="Task Menu"
+                          id="Task Menu"
+                        />
+                        <label
+                          class="form-check-label lh-19 gray-900"
+                          for="Task Menu"
+                        >
+                          Task Menu
+                        </label>
+                      </div>
+                    </section>
+                    <div class="admin-line mb-23"></div>
+                    <p class="mb-3 fs-5 gray-900 fw-bold lh-33">
+                      Deactivate Account
+                    </p>
+                    <div class="d-flex align-items-center text-danger mb-3">
+                      <span class="material-symbols-outlined me-2">
+                        warning
+                      </span>
+                      <p class="mb-0">This cannot be undone!</p>
+                    </div>
+                    <input
+                      class="btn btn-outline-danger w-100 fw-bold py-3 mb-5"
+                      type="button"
+                      value="Deactivate This Account"
+                    />
+                    <div class="text-end mb-3">
+                      <input
+                        class="btn btn-outline-success py-2 px-32 fw-bold lh-19"
+                        type="button"
+                        value="Cancel"
+                      />
+                      <input
+                        class="btn btn-success py-2 px-32 ms-3 fw-bold lh-19"
+                        type="submit"
+                        value="Update"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- vs view -->
+          <div
+            class="modal fade"
+            id="Moda3"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <!-- <div class="modal-header border-0"></div> -->
+                <div class="modal-body my-4">
+                  <div class="d-flex">
+                    <div class="me-4">
+                      <img
+                        class="img-emir"
+                        src="./assets/images/emir.jpeg"
+                        alt="emir"
+                      />
+                    </div>
+                    <div class="w-75">
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-0 lh-19 gray-900">#1</p>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+
+                      <p class="mb-0 lh-19 gray-900">Admin</p>
+                      <p class="mb-0 lh-29 fs-4 fw-bold mb-2">Emir Wicks</p>
+                      <a
+                        class="gray-600 fs-14 lh-17"
+                        href="mailto:emir.wicks@mail.com"
+                        >emir.wicks@mail.com</a
+                      >
+                      <div class="mt-3">
+                        <div
+                          class="accordion accordion-flush d-inline"
+                          id="accordionFlushExample"
+                        >
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                              <button
+                                class="accordion-button collapsed p-0"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseOne"
+                              >
+                                <p
+                                  class="mb-0 lh-17 fs-14 gray-900 py-1 px-2 bc-gray-100 rounded d-inline"
+                                >
+                                  Verified
+                                </p>
+                              </button>
+                            </h2>
+                            <div
+                              id="flush-collapseOne"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingOne"
+                              data-bs-parent="#accordionFlushExample"
+                            >
+                              <div class="accordion-body p-0 text-end pt-4">
+                                <button
+                                  class="btn btn-outline-danger py-2 px-4 me-3"
+                                >
+                                  Deactivate
+                                </button>
+                                <button class="btn btn-success py-2 px-4">
+                                  Edit
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tr>
+        <tr>
+          <th scope="row">#2</th>
+          <td>Zaina Goldsmith</td>
+          <td>zaina.goldsmith@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">#3</th>
+          <td>Mahima Lopez</td>
+          <td>mahima.lopez@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">#4</th>
+          <td>Pharrell Murray</td>
+          <td>pharrell.murray@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">#5</th>
+          <td>Annika Mcbride</td>
+          <td>annika.mcbride@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">#6</th>
+          <td>Fatimah Clark</td>
+          <td>fatimah.clark@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">#7</th>
+          <td>Klaudia Rhodes</td>
+          <td>klaudia.rhodes@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">#8</th>
+          <td>Tillie Lucero</td>
+          <td>tillie.lucero@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">#9</th>
+          <td>Sabrina Stephenson</td>
+          <td>sabrina.stephenson@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">#10</th>
+          <td>Annie Smith</td>
+          <td>annie.smith@mail.com</td>
+          <td>Yes</td>
+          <td class="text-end">
+            <span class="material-symbols-outlined"> visibility </span>
+            <span class="material-symbols-outlined ms-4"> edit </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <nav
+    class="page d-flex justify-content-end me-5"
+    aria-label="Page navigation example"
+  >
+    <ul class="pagination">
+      <li class="page-item">
+        <a
+          class="page-link d-flex px-1 text-success border-success"
+          href="#"
+          aria-label="Previous"
+        >
+          <span class="material-icons"> chevron_left </span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link bg-success text-white border-success" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-dark border-success" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link text-dark border-success" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a
+          class="page-link d-flex px-1 text-success border-success"
+          href="#"
+          aria-label="Next"
+        >
+          <span class="material-icons"> navigate_next </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</main>

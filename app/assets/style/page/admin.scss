@@ -1,0 +1,41 @@
+.fc-main {
+  color: $main-color;
+}
+
+.admin-hover:hover {
+  p {
+    color: $main-color;
+  }
+}
+
+.table {
+  thead {
+    border-bottom-color: black;
+    th {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  tbody {
+    td,
+    span {
+      vertical-align: middle;
+    }
+    th,
+    td {
+      padding: 18px 0;
+    }
+  }
+}
+
+.page {
+  margin-top: 63px;
+}
+
+.modal-header {
+  padding: 32px !important;
+}
+
+.modal-body {
+  padding: 32px !important;
+}

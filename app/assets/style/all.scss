@@ -1,0 +1,146 @@
+@import "./abstracts/variables";
+@import "./base/base";
+@import "./base/reset";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./page/index.scss";
+@import "./page/admin.scss";
+
+.code {
+  background-color: #f8f9fa;
+  color: $main-color;
+}
+
+.logo {
+  background: url(../images/logo-ANSWER.svg) no-repeat;
+  background-position: 20% 50%;
+  a {
+    opacity: 0;
+  }
+}
+
+.material-symbols-outlined.none {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 16;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 16;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown-toggle.arrow::after {
+  display: none !important;
+}
+
+.container-232 {
+  width: 296px;
+  padding: 32px;
+  margin: 0 auto;
+}
+
+.px-32 {
+  padding: 0 32px !important;
+}
+
+.p-32 {
+  padding: 32px;
+}
+
+.container-984 {
+  max-width: 984px;
+  padding: 32px;
+  margin: 0 auto;
+}
+
+.main-color {
+  color: $main-color;
+}
+
+.pe-37 {
+  padding-right: 37px;
+}
+
+.fz-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-23 {
+  margin-bottom: 23px;
+}
+
+.me-32 {
+  margin-right: 32px;
+}
+
+.ms-64 {
+  margin-left: 64px;
+}
+
+.user-img {
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.px-32 {
+  padding: 0 32px;
+}
+
+.lh-17 {
+  line-height: 17px !important;
+}
+
+.lh-19 {
+  line-height: 19px !important;
+}
+
+.lh-29 {
+  line-height: 29px !important;
+}
+
+.lh-33 {
+  line-height: 33px !important;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+//admin
+.admin-line {
+  border-bottom: 1px solid #ced4da;
+}
+
+.verification-btn {
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+  line-height: 19px;
+}
+
+.border-black {
+  border: 1px solid black !important;
+  border-radius: 2px !important;
+}
+
+.modal-body {
+  padding: 0 32px !important;
+}
+
+img.img-emir {
+  width: 141px;
+  height: 141px;
+  object-fit: cover;
+}
